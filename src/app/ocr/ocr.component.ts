@@ -52,8 +52,8 @@ export class OcrComponent {
     const client = new TextractClient({
       region: 'us-east-1',
       credentials: {
-        accessKeyId: '**',
-				secretAccessKey: '**',
+        accessKeyId: '**',//set acess key 
+				secretAccessKey: '**',//set here your secret key
       },
     });
     const blob = Buffer.from(this.src.split(',')[1], 'base64');
