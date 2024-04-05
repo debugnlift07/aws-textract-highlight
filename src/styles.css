@@ -1,0 +1,64 @@
+#root {
+ 
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .App{
+    display: flex;
+  }
+  
+  .textResult, .imagePreview{
+    width: 600px;
+  }
+  
+  .highlighted-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .original-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .highlighted-box {
+    position: absolute;
+    /* border: 2px solid yellow;
+    background-color: transparent; */
+    pointer-events: none;
+  }
+  
+  .extracted-lines {
+    margin-top: 10px;
+    overflow: auto;
+    text-align: left;
+    border: 1px solid #c8c8c8;
+      padding: 10px;
+  }
+  
+  .extracted-line {
+    padding: 5px;
+    margin: 5px; 
+    padding: 8px; 
+    background: #d7d7d7;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 30px;
+  }
+  
+  .extracted-line:hover{
+    background: aliceblue;
+  }
+  
+  .extracted-line.clicked {
+    background-color: orange;
+  }
+  
+  .highlighted-box.clicked {
+    border: 2px solid orange;
+  }
+  
+  

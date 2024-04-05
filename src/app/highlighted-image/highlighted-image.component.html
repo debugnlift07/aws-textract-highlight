@@ -1,0 +1,14 @@
+<div class="highlighted-image-container">
+     <img [src]="src" alt="Preview" class="original-image" />
+   
+     <div *ngFor="let coord of coordinates; let index = index"
+          [id]="index"
+          [class.highlighted-box]="true"
+          [class.clicked]="index === clickedLineIndex"
+          [style.left.%]="coord.Left * 100"
+          [style.top.%]="coord.Top * 100"
+          [style.width.%]="coord.Width * 100"
+          [style.height.%]="coord.Height * 100">
+     </div>
+   </div>
+   

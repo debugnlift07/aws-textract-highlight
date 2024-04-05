@@ -1,0 +1,21 @@
+<p>Step 1 - Load image</p>
+<br />
+<p>Click on "Extract text from image" button</p>
+<br />
+<div class="App">
+  <div class="imagePreview">
+    <input class="inputfile" id="file" type="file" name="file" (change)="onSelectFile($event)" accept="image/*" />
+    <ng-container *ngIf="src">
+      <app-highlighted-image [src]="src" [coordinates]="highlightedCoordinates" [clickedLineIndex]="clickedLineIndex"></app-highlighted-image>
+    </ng-container>
+  </div>
+  <div class="textResult">
+    <button (click)="onRunOCR()">Extract Text from image</button>
+    <div class="extracted-lines">
+      <ng-container *ngFor="let line of extractedLines; let index = index">
+        <input [id]="'line-' + index" class="extracted-line" [class.clicked]="index === clickedLineIndex" (click)="onSearchChange(index)" [value]="line" />
+      </ng-container>
+    </div>
+    <p>Due to key are removed demo will not work, if u wish to see connect me in gmail will show you.</p>
+  </div>
+</div>
